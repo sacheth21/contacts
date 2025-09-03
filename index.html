@@ -1,160 +1,535 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>g-labs</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: Regna
-  * Template URL: https://bootstrapmade.com/regna-bootstrap-onepage-template/
-  * Updated: Aug 07 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
-</head>
-
-<body class="starter-page-page">
-
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">G-lab</h1>
-      </a>
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#team">Team</a></li>
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-
-    </div>
-  </header>
-
-  <main class="main">
-
-    <!-- Page Title -->
-    <div class="page-title dark-background">
-      <div class="container position-relative">
-        <h1>contacts</h1>
-        <p></p>
-        <nav class="breadcrumbs">
-          <ol>
-            
-         
-          </ol>
-        </nav>
-      </div>
-    </div><!-- End Page Title -->
-
-    <!-- Starter Section Section -->
-    <section id="starter-section" class="starter-section section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h4>Owner=K U sacheth</h4>
-		<h4>E-mail = sachethjnv@gmail.com</h4>
-       <h4>Phone number= 9449261936</h4>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up">
-       
-      </div>
-
-    </section><!-- /Starter Section Section -->
-
-  </main>
-
-  <footer id="footer" class="footer dark-background">
-    <div class="container">
-      <h3 class="sitename">G-labs</h3>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BMI Calculator - by KU Sacheth</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+    
+    :root {
+      --primary-color: #4154f1;
+      --secondary-color: #717ff5;
+      --accent-color: #ff6b6b;
+      --success-color: #28a745;
+      --warning-color: #ffc107;
+      --danger-color: #dc3545;
+      --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      --gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    /* Animated background shapes */
+    .bg-shape {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      z-index: 0;
+    }
+    
+    .shape-1 {
+      width: 300px;
+      height: 300px;
+      top: -100px;
+      left: -100px;
+      animation: float 8s ease-in-out infinite;
+    }
+    
+    .shape-2 {
+      width: 200px;
+      height: 200px;
+      bottom: -50px;
+      right: -50px;
+      animation: float 10s ease-in-out infinite;
+    }
+    
+    .shape-3 {
+      width: 150px;
+      height: 150px;
+      top: 50%;
+      right: 10%;
+      animation: float 7s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(10deg); }
+    }
+    
+    .bmi-container {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 900px;
+      display: flex;
+      flex-wrap: wrap;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    }
+    
+    .bmi-info {
+      flex: 1;
+      min-width: 300px;
+      background: var(--gradient-1);
+      color: white;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    
+    .bmi-calculator {
+      flex: 1;
+      min-width: 300px;
+      background-color: #fff;
+      padding: 40px;
+    }
+    
+    .bmi-info h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    
+    .bmi-info p {
+      font-size: 1rem;
+      opacity: 0.9;
+      margin-bottom: 30px;
+    }
+    
+    .bmi-categories {
+      margin-top: 20px;
+    }
+    
+    .bmi-category-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    
+    .category-color {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
+    
+    .category-underweight { background-color: #3498db; }
+    .category-normal { background-color: #2ecc71; }
+    .category-overweight { background-color: #f39c12; }
+    .category-obese { background-color: #e74c3c; }
+    
+    .bmi-calculator h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 30px;
+      color: #333;
+      text-align: center;
+    }
+    
+    .form-group {
+      margin-bottom: 25px;
+      position: relative;
+    }
+    
+    .form-group label {
+      font-weight: 500;
+      margin-bottom: 8px;
+      color: #555;
+      display: block;
+    }
+    
+    .form-control {
+      border-radius: 10px;
+      border: 1px solid #e0e0e0;
+      padding: 15px 20px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      height: auto;
+    }
+    
+    .form-control:focus {
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 3px rgba(65, 84, 241, 0.1);
+      outline: none;
+    }
+    
+    .input-group-text {
+      background-color: #f8f9fa;
+      border: 1px solid #e0e0e0;
+      border-radius: 10px;
+      padding: 0 15px;
+      color: #6c757d;
+      font-size: 1rem;
+    }
+    
+    .btn-calculate {
+      background: var(--gradient-2);
+      border: none;
+      color: white;
+      font-weight: 600;
+      padding: 15px;
+      border-radius: 10px;
+      font-size: 1rem;
+      width: 100%;
+      margin-top: 10px;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(245, 87, 108, 0.3);
+    }
+    
+    .btn-calculate:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(245, 87, 108, 0.4);
+    }
+    
+    .btn-reset {
+      background: #6c757d;
+      border: none;
+      color: white;
+      font-weight: 500;
+      padding: 12px;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      width: 100%;
+      margin-top: 10px;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-reset:hover {
+      background: #5a6268;
+    }
+    
+    .bmi-result-container {
+      margin-top: 30px;
+      padding: 20px;
+      border-radius: 15px;
+      background-color: #f8f9fa;
+      text-align: center;
+      display: none;
+    }
+    
+    .bmi-result-value {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      background: var(--gradient-1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .bmi-result-category {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    
+    .bmi-result-message {
+      font-size: 0.9rem;
+      color: #6c757d;
+    }
+    
+    .bmi-gauge {
+      width: 200px;
+      height: 100px;
+      margin: 20px auto;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .gauge-bg {
+      position: absolute;
+      width: 200px;
+      height: 100px;
+      border-radius: 100px 100px 0 0;
+      background: #e9ecef;
+      overflow: hidden;
+    }
+    
+    .gauge-fill {
+      position: absolute;
+      width: 200px;
+      height: 100px;
+      border-radius: 100px 100px 0 0;
+      background: var(--gradient-2);
+      transform-origin: bottom center;
+      transform: rotate(0deg);
+      transition: transform 1s ease;
+    }
+    
+    .gauge-center {
+      position: absolute;
+      width: 170px;
+      height: 85px;
+      background: white;
+      border-radius: 85px 85px 0 0;
+      bottom: 0;
+      left: 15px;
+    }
+    
+    .gauge-needle {
+      position: absolute;
+      width: 4px;
+      height: 80px;
+      background: #333;
+      bottom: 0;
+      left: 98px;
+      transform-origin: bottom center;
+      transform: rotate(0deg);
+      transition: transform 1s ease;
+      border-radius: 2px;
+    }
+    
+    .gauge-needle:before {
+      content: '';
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      background: #333;
+      border-radius: 50%;
+      bottom: -6px;
+      left: -4px;
+    }
+    
+    .footer {
+      text-align: center;
+      padding: 20px;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.9rem;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .footer a {
+      color: white;
+      font-weight: 500;
+      text-decoration: none;
+    }
+    
+    @media (max-width: 768px) {
+      .bmi-container {
+        flex-direction: column;
+      }
       
-      <div class="social-links d-flex justify-content-center">
-        <a href="https://www.facebook.com/profile.php?id=61571588624241"><i class="bi bi-facebook"></i></a>
-        <a href="https://www.instagram.com/ghost_201131/"><i class="bi bi-instagram"></i></a>
-      </div>
-      <div class="container">
-        <div class="copyright">
-          <span>Copyright</span> <strong class="px-1 sitename">G-labs</strong> <span>All Rights Reserved</span>
+      .bmi-info {
+        padding: 30px 20px;
+      }
+      
+      .bmi-calculator {
+        padding: 30px 20px;
+      }
+      
+      .bmi-info h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Background shapes -->
+  <div class="bg-shape shape-1"></div>
+  <div class="bg-shape shape-2"></div>
+  <div class="bg-shape shape-3"></div>
+  
+  <div class="bmi-container">
+    <div class="bmi-info">
+      <h1>BMI Calculator</h1>
+      <p>Body Mass Index (BMI) is a measure of body fat based on height and weight. Calculate your BMI to determine if you're in a healthy weight range.</p>
+      
+      <div class="bmi-categories">
+        <h3>BMI Categories:</h3>
+        <div class="bmi-category-item">
+          <div class="category-color category-underweight"></div>
+          <span>Underweight: &lt; 18.5</span>
         </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you've purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-          Designed by <a href="https://sacheth21.github.io/g-labs/">K U sacheth</a>
+        <div class="bmi-category-item">
+          <div class="category-color category-normal"></div>
+          <span>Normal weight: 18.5 - 24.9</span>
+        </div>
+        <div class="bmi-category-item">
+          <div class="category-color category-overweight"></div>
+          <span>Overweight: 25 - 29.9</span>
+        </div>
+        <div class="bmi-category-item">
+          <div class="category-color category-obese"></div>
+          <span>Obese: ≥ 30</span>
         </div>
       </div>
     </div>
-  </footer>
-
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
+    
+    <div class="bmi-calculator">
+      <h2>Calculate Your BMI</h2>
+      <form id="bmiForm">
+        <div class="form-group">
+          <label for="height">Height</label>
+          <div class="input-group">
+            <input type="number" class="form-control" id="height" required placeholder="Enter your height" min="1" step="0.1">
+            <span class="input-group-text">cm</span>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="weight">Weight</label>
+          <div class="input-group">
+            <input type="number" class="form-control" id="weight" required placeholder="Enter your weight" min="1" step="0.1">
+            <span class="input-group-text">kg</span>
+          </div>
+        </div>
+        
+        <button type="submit" class="btn btn-calculate">Calculate BMI</button>
+        <button type="button" class="btn btn-reset" id="resetBtn">Reset</button>
+      </form>
+      
+      <div class="bmi-result-container" id="resultContainer">
+        <div class="bmi-result-value" id="bmiResult"></div>
+        <div class="bmi-result-category" id="bmiCategory"></div>
+        <div class="bmi-result-message" id="bmiMessage"></div>
+        
+        <div class="bmi-gauge">
+          <div class="gauge-bg"></div>
+          <div class="gauge-fill" id="gaugeFill"></div>
+          <div class="gauge-center"></div>
+          <div class="gauge-needle" id="gaugeNeedle"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    Designed by <a href="https://sacheth21.github.io/BMI-CALCULATOR/">KU Sacheth</a> | © 2023 G-LABS
+  </div>
+  
+  <script>
+    document.getElementById('bmiForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const height = parseFloat(document.getElementById('height').value) / 100; // Convert to meters
+      const weight = parseFloat(document.getElementById('weight').value);
+      
+      if (height > 0 && weight > 0) {
+        const bmi = (weight / (height * height)).toFixed(1);
+        let category = "";
+        let message = "";
+        let color = "";
+        let gaugeRotation = 0;
+        
+        if (bmi < 18.5) {
+          category = "Underweight";
+          message = "You are underweight. Consider consulting with a healthcare provider for advice.";
+          color = "#3498db";
+          gaugeRotation = -45 + (bmi / 18.5) * 45;
+        } else if (bmi < 24.9) {
+          category = "Normal weight";
+          message = "Congratulations! You are in the healthy weight range. Keep up the good work!";
+          color = "#2ecc71";
+          gaugeRotation = (bmi - 18.5) / 6.4 * 90;
+        } else if (bmi < 29.9) {
+          category = "Overweight";
+          message = "You are overweight. Consider adopting a healthier lifestyle and diet.";
+          color = "#f39c12";
+          gaugeRotation = 45 + (bmi - 25) / 4.9 * 45;
+        } else {
+          category = "Obese";
+          message = "You are in the obese range. It's recommended to consult with a healthcare provider.";
+          color = "#e74c3c";
+          gaugeRotation = 90 + Math.min((bmi - 30) / 10 * 45, 45);
+        }
+        
+        // Display results
+        document.getElementById('bmiResult').textContent = bmi;
+        document.getElementById('bmiCategory').textContent = category;
+        document.getElementById('bmiCategory').style.color = color;
+        document.getElementById('bmiMessage').textContent = message;
+        
+        // Update gauge
+        document.getElementById('gaugeFill').style.background = `linear-gradient(90deg, ${color}, ${color}dd)`;
+        document.getElementById('gaugeFill').style.transform = `rotate(${gaugeRotation}deg)`;
+        document.getElementById('gaugeNeedle').style.transform = `rotate(${gaugeRotation}deg)`;
+        
+        // Show result container with animation
+        const resultContainer = document.getElementById('resultContainer');
+        resultContainer.style.display = 'block';
+        resultContainer.style.opacity = '0';
+        resultContainer.style.transform = 'translateY(20px)';
+        
+        setTimeout(() => {
+          resultContainer.style.transition = 'all 0.5s ease';
+          resultContainer.style.opacity = '1';
+          resultContainer.style.transform = 'translateY(0)';
+        }, 100);
+        
+      } else {
+        // Create a toast notification instead of alert
+        showToast("Please enter valid numbers for height and weight.");
+      }
+    });
+    
+    // Reset button functionality
+    document.getElementById('resetBtn').addEventListener('click', function() {
+      document.getElementById('bmiForm').reset();
+      
+      const resultContainer = document.getElementById('resultContainer');
+      resultContainer.style.transition = 'all 0.3s ease';
+      resultContainer.style.opacity = '0';
+      resultContainer.style.transform = 'translateY(20px)';
+      
+      setTimeout(() => {
+        resultContainer.style.display = 'none';
+      }, 300);
+    });
+    
+    // Toast notification function
+    function showToast(message) {
+      // Create toast element if it doesn't exist
+      let toast = document.getElementById('toast');
+      if (!toast) {
+        toast = document.createElement('div');
+        toast.id = 'toast';
+        toast.style.position = 'fixed';
+        toast.style.bottom = '20px';
+        toast.style.left = '50%';
+        toast.style.transform = 'translateX(-50%)';
+        toast.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+        toast.style.color = 'white';
+        toast.style.padding = '12px 24px';
+        toast.style.borderRadius = '8px';
+        toast.style.zIndex = '1000';
+        toast.style.opacity = '0';
+        toast.style.transition = 'opacity 0.3s ease';
+        document.body.appendChild(toast);
+      }
+      
+      toast.textContent = message;
+      toast.style.opacity = '1';
+      
+      setTimeout(() => {
+        toast.style.opacity = '0';
+        setTimeout(() => {
+          document.body.removeChild(toast);
+        }, 300);
+      }, 3000);
+    }
+  </script>
 </body>
-
 </html>
